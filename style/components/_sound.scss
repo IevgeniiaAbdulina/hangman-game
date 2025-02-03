@@ -1,0 +1,29 @@
+@use "../abstracts/variables" as *;
+
+.sound {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__play-bth {
+    transition: all .2s ease-in-out;
+
+    &.active {
+      padding: 3px 3px 0 3px;
+      outline: 3px solid $darken-color;
+      filter: brightness(0) saturate(100%) invert(76%) sepia(11%) saturate(4672%) hue-rotate(36deg) brightness(109%) contrast(65%);
+    }
+  }
+}
+
+@media (hover: hover) {
+  .sound {
+    &__play-bth {
+      &:hover {
+        filter: brightness(0) saturate(100%) invert(76%) sepia(11%) saturate(4672%) hue-rotate(36deg) brightness(109%) contrast(65%);
+      }
+    }
+  }
+}

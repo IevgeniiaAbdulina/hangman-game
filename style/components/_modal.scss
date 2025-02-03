@@ -1,0 +1,145 @@
+@import "../abstracts/variables";
+
+$background-color: #DFF8D0;
+$border-color: #2F2F51;
+$border-inner-outline: #8BCD48;
+$text-color: #2F2F51;
+$light-inner-color: #D9FF9C;
+$dark-inner-color: #30622F;
+$dark-border-color: #0E0E0E;
+$font-btn-color: #2F2F51;
+$btn-background-color: #8BCD48;
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(24, 28, 41, 0.8);
+  z-index: 11;
+}
+
+#modal.modal {
+  padding: 20px 0;
+}
+
+.modal {
+  position: absolute;
+  margin: 0 auto;
+  width: calc(100vw - 16px);
+  max-width: 600px;
+  min-width: 300px;
+  height: fit-content;
+  overflow: hidden;
+  text-align: center;
+
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  color: $font-btn-color;
+  background-color: $background-color;
+  border: 3px solid $border-color;
+  box-shadow: inset 3px 3px $light-inner-color,
+  inset -3px -3px $dark-inner-color,
+  inset 9px 40px $border-inner-outline,
+  inset -9px -9px $border-inner-outline,
+  inset -12px -12px $border-color,
+  inset 12px 12px $border-color,
+  inset 9px 43px $border-color,
+  3px 3px $border-color;
+  z-index: 12;
+  transition: 0.5s ease-in-out;
+
+  &__header {
+    @include press-start-2p-regular;
+  }
+
+  &__close-button {
+    width: 27px;
+    height: 27px;
+    transform: translate(-12px, -12px);
+    align-self: flex-end;
+    cursor: pointer;
+    border: none;
+
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url(../assets/close-btn.svg);
+    background-color: $border-inner-outline;
+  }
+
+  &__start-button {
+    @include press-start-2p-regular;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+
+    color: $static-white;
+    padding: 16px 32px;
+    margin: 20px 0 40px 0;
+    cursor: pointer;
+    background-color: $btn-background-color;
+    border: 3px solid $border-color;
+    box-shadow: 3px 3px $border-color, -3px -3px $dark-inner-color;
+    transition: all 0.2s ease-out;
+
+    &:active {
+      box-shadow: none;
+      transform: translateY(2px);
+    }
+  }
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+@media (hover: hover) {
+  .modal {
+    &__close-button {
+      &:hover {
+        background-color: #A6F80E;
+        box-shadow: 3px 3px $border-color;
+      }
+    }
+
+    &__start-button {
+      &:hover {
+        background-color: #A6F80E;
+        box-shadow: 3px 3px $border-color,
+        -3px -3px $dark-inner-color,
+        6px 6px $border-color;
+
+      }
+    }
+  }
+}
+
+@media only screen and (width < 420px) {
+  #modal.modal {
+    padding: 10px 0;
+  }
+
+  .modal {
+    padding: 10px 0;
+
+    &__close-button {
+      transform: translate(-12px, -3px);
+    }
+
+    &__start-button {
+      padding: 16px;
+      font-size: 1rem;
+    }
+  }
+}

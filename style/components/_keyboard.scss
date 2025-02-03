@@ -1,0 +1,90 @@
+@use "../abstracts/variables" as *;
+
+.keyboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__wrap {
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  &__item {
+    @include silkscreen-regular;
+    font-size: 27px;
+    width: 48px;
+    height: 48px;
+    padding: 0 6px 8px 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $darken-color;
+
+    cursor: pointer;
+    overflow: hidden;
+    background-size: inherit;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-image: url(../assets/key-button-48.svg);
+    transition: transform .2s ease-in-out ;
+
+    &.disabled {
+      color: #4D5B75;
+      pointer-events: none;
+      box-shadow: inset 100px 100px 0 100px rgba(223, 248, 208, 0.5);
+    }
+  }
+}
+
+/**
+*   media queries for keyboard key
+*/
+@media only screen and (420px <= width < 560px) {
+  .keyboard {
+    &__wrap {
+      width: 392px;
+      gap: 4px;
+    }
+
+    &__item {
+      width: 40px;
+      height: 40px;
+      font-size: 24px;
+      background-image: url(../assets/key-button-40.svg);
+    }
+  }
+}
+
+@media only screen and (320px <= width < 420px) {
+  .keyboard {
+    &__wrap {
+      width: calc(100% - 16px);
+      gap: 4px;
+    }
+
+    &__item {
+      width: 28px;
+      height: 28px;
+      font-size: 16px;
+      background-image: url(../assets/key-button-28.svg);
+    }
+  }
+}
+
+@media (hover: hover) {
+  .keyboard {
+    &__item {
+      &:hover {
+        box-shadow: inset 100px 100px 0 100px rgba(223, 248, 208, 0.5);
+      }
+
+      &:active {
+        transform: translate(3px, 3px);
+      }
+    }
+  }
+}

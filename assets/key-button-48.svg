@@ -1,0 +1,32 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_12968_142)">
+<rect x="3" y="42" width="36" height="3" fill="#303353"/>
+<rect x="3" y="45" width="42" height="3" fill="#303353"/>
+<rect y="36" width="3" height="9" fill="#303353"/>
+<rect x="39" y="36" width="3" height="9" fill="#303353"/>
+<rect x="42" y="3" width="3" height="42" fill="#303353"/>
+<rect x="45" y="6" width="3" height="39" fill="#303353"/>
+<rect x="3" y="42" width="3" height="3" fill="#4090B4"/>
+<rect x="9" y="42" width="3" height="3" fill="#4090B4"/>
+<rect x="15" y="42" width="3" height="3" fill="#4090B4"/>
+<rect x="21" y="42" width="3" height="3" fill="#4090B4"/>
+<rect x="27" y="42" width="3" height="3" fill="#4090B4"/>
+<rect x="33" y="42" width="3" height="3" fill="#4090B4"/>
+<rect x="39" y="42" width="3" height="3" fill="#4090B4"/>
+<rect x="3" y="39" width="3" height="3" fill="#303353"/>
+<rect x="36" y="39" width="3" height="3" fill="#303353"/>
+<rect x="39" width="3" height="3" fill="#303353"/>
+<rect x="3" width="36" height="3" fill="#30622F"/>
+<rect x="3" y="3" width="36" height="36" fill="#8BCD48"/>
+<rect x="6" y="39" width="30" height="3" fill="#D9FF9C"/>
+<rect x="3" y="36" width="3" height="3" fill="#D9FF9C"/>
+<rect y="3" width="3" height="33" fill="#30622F"/>
+<rect x="36" y="36" width="3" height="3" fill="#D9FF9C"/>
+<rect x="39" y="3" width="3" height="33" fill="#D9FF9C"/>
+</g>
+<defs>
+<clipPath id="clip0_12968_142">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

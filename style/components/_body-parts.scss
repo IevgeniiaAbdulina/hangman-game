@@ -1,0 +1,77 @@
+@mixin image-settings($img-url) {
+  overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url($img-url);
+}
+
+.body-parts {
+  &__wrapper {
+    position: relative;
+    width: 340px;
+    height: 560px;
+  }
+
+  &__head {
+    position: absolute;
+    left: 190px;
+    top: 130px;
+    width: 110px;
+    height: 150px;
+    @include image-settings('../assets/body-parts/head.svg');
+  }
+
+  &__body {
+    position: absolute;
+    left: 190px;
+    top: 280px;
+    width: 90px;
+    height: 110px;
+    @include image-settings('../assets/body-parts/body.svg');
+  }
+
+  &__left-arm {
+    position: absolute;
+    left: 131px;
+    top: 240px;
+    width: 60px;
+    height: 70px;
+    @include image-settings('../assets/body-parts/hand-one.svg');
+  }
+
+  &__right-arm {
+    position: absolute;
+    top: 270px;
+    right: 1px;
+    width: 60px;
+    height: 70px;
+    @include image-settings('../assets/body-parts/hand-two.svg');
+  }
+
+  &__left-leg {
+    position: absolute;
+    top: 349px;
+    left: 151px;
+    width: 60px;
+    height: 90px;
+    @include image-settings('../assets/body-parts/leg-one.svg');
+  }
+
+  &__right-leg {
+    position: absolute;
+    top: 369px;
+    right: 11px;
+    width: 90px;
+    height: 60px;
+    @include image-settings('../assets/body-parts/leg-two.svg');
+  }
+}
+
+.body-item {
+  display: none;
+}
+
+.is-visible {
+  display: block !important;
+}

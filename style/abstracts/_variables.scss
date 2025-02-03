@@ -1,0 +1,67 @@
+/*
+-------------------------------------
+    // Fonts
+-------------------------------------
+*/
+@import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+$fonts-press-start-2p: "Press Start 2P", serif;
+$fonts-silkscreen: "Silkscreen", serif;
+$fonts-geo: "Geo", serif;
+
+@mixin press-start-2p-regular {
+  font-family: $fonts-press-start-2p;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin silkscreen-regular {
+  font-family: $fonts-silkscreen;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin silkscreen-bold {
+  font-family: $fonts-silkscreen;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin geo-regular {
+  font-family: $fonts-geo;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin geo-regular-italic {
+  font-family: $fonts-geo;
+  font-weight: 400;
+  font-style: italic;
+}
+
+
+/*
+-------------------------------------
+    // Layout
+-------------------------------------
+*/
+$layout-desktop: 1440px;
+$layout-tablet: 768px;
+$layout-mobile: 360px;
+
+/*
+-------------------------------------
+    // Colors
+-------------------------------------
+*/
+$primary-color: #8bcd48;
+$primary-color-10: #8bcd481A;
+$secondary-color: #D31C79;
+$dark-color: #4090B4;
+$darken-color: #302F51;
+$background-color: #cfe5cf;
+$static-white: #FFFFFF;
+$static-black: #0E0E0E;
+

@@ -1,0 +1,66 @@
+@use "../abstracts/variables" as *;
+
+@mixin dot {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: $secondary-color;
+  animation: random-pixel 8s infinite;
+}
+
+body {
+  background-color: $background-color;
+
+  &::after {
+    @include dot;
+    z-index: -1;
+  }
+}
+
+/**
+  animation random pixel
+*/
+@keyframes random-pixel {
+  0%, 10% {
+    opacity: 1;
+    top: random(20) + rem;
+    left: random(20) + rem;
+  }
+  10% {
+    opacity: 0;
+  }
+  20%, 30%, 40% {
+    opacity: 0;
+    top: random(100) + vh;
+    left: random(100) + vw;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  50%, 60%, 70% {
+    opacity: 0;
+    top: random(100) + vh;
+    left: random(100) + vw;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  80%, 90%, 100% {
+    opacity: 0;
+    top: random(100) + vh;
+    left: random(100) + vw;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
